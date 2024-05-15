@@ -1,0 +1,528 @@
+header{
+    background-color: rgb(33, 83, 228);
+    padding: 30px;
+    margin: -8px 0px;
+}
+.button{
+    background-color: rgb(33, 83, 228);
+    border: 0px;
+    color: aliceblue;
+    font-size: medium;
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    display: inline-block;
+    
+}
+li{
+    display: inline-block;
+    margin: 10px;
+   
+}
+.topRight{
+    display: inline-block;
+    margin: 0px 0px 0px 550px;
+    position: relative;
+    top: 7px;
+}
+.topR{
+    display: inline-block;
+    margin: 0px 0px 0px 25px;
+    position: relative;
+    top: 7px;
+}
+a{
+     text-decoration: none;
+     color: aliceblue;
+}
+a:hover{
+  color: black;
+}
+ .a:hover{
+   background-color: rgb(255, 255, 255);
+}
+.a1:hover{
+  background-color: rgb(0, 162, 255);
+}
+.active { text-decoration: none; color:rgb(0, 0, 0); }
+.logo{
+    border: 0px;
+    color: aliceblue;
+    display: inline-block;
+    width: 70px;
+    font-size: 30px;
+    margin: -30px 20px 20px 40px;
+    background-size: 50px;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 30px;
+}
+.font{
+    font-family: Arial, Helvetica , sans-serif;
+}
+.topleft{
+    display: flex;
+    flex-direction: row-reverse;/*from right to left(for the  items )*/
+    margin: auto;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(33, 83, 228);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 40px 80px;
+    z-index: 1;
+    right: 0;/*to makethe dropdown  appear to the left not the right*/
+    
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+    
+  }
+.section{
+    background-color: black;
+    color: rgb(33, 83, 228);
+    margin: 10px -8px 0px -10px;
+    padding: 80px 80px 120px 80px;
+
+}
+* {box-sizing: border-box}/*the star indicates that it is golbal for every single img in the slider
+box sizing is a css property that determines how the width and height of an element are calculated, taking into account padding and border but not margin
+border box calculates height and width in a different way of how it is calculated*/
+body {font-family: Verdana, sans-serif; margin:0}/*font type*/
+.mySlides {display: none}/*so that nothing displays when another one is being shown*/
+.img { display: block;/*display is block so every img is being shown alone in a block*/
+    margin-left: auto;
+    margin-right: auto;
+width: 40%;}
+
+.slideshow-container {
+    max-width: 2000px;
+    position: relative;/*making elements remain in its position , slidshow max width set to 2000px*/
+    margin: auto;
+  }
+  .prev, .next {/*IMPORTANT
+    prev and next button cursor is pointer which indicates that the button is active and clickable (not like hover)
+    difference between hover and pointer is that pointer is defined when css is loaded but hover only when the cursor is on it
+    */
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    margin-left: -30px;
+    margin-right: 30px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;/*makes transitions between different states of the button --> ease is for a smooth transition */
+    border-radius: 0 3px 3px 0;
+    user-select: none;/*doesnt make the user selece what is in the box*/
+  }
+  .next {/*must be different */
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .prev:hover, .next:hover {/*mouse hover*/
+    background-color: rgba(15, 70, 223, 0.8);
+  }
+
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;/* is positioned relative to the nearest positioned ancestor*/
+    bottom: 8px;
+    width: 88%;
+    text-align: center;
+  }
+  /*.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }not needed*/
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0px 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active1, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;/*animation name and duration*/
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {/*making animation which goes from opacity 0.4 to 1 like dark then going to light (ex)*/
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  .mySlides.active2 { /*to show the first slid in the sliders because it is not working in js file*/
+    display: block;
+  }
+  .middleImg{
+  width: auto;
+  height: 700px;
+  overflow: hidden;
+  background-image: url(pexels-yan-krukov-9072389.jpg);
+  margin-top: -38px;
+  text-align: center;
+  }
+.middleThing1{
+  cursor: pointer;
+  height: 40px;
+  width: 140px;
+  margin: 5px 0px 0px 0px;
+  padding: 11px 10px 9px 10px;
+  background-color: #001aff;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  font-size: 15px;
+  color: black;
+}
+.middleThing2{
+  cursor: pointer;
+  height: 40px;
+  width: 140px;
+  margin: 5px 40px 0px -5px;
+  padding: 10px;
+  display: inline-block;
+  border-color: rgb(0, 162, 255);
+  border-style: solid;
+  border-width: 1px;
+  color: rgb(0, 162, 255);
+  transition: background-color 0.6s ease;
+  font-size: 15px;
+}
+.semiFooter{
+ 
+  color: rgb(0, 162, 255);
+  font-size: 30px;
+  margin: 30px 0px 10px 100px;
+}
+.semiFooter1{
+ 
+  color: white;
+  font-size: 17px;
+  margin: 20px 100px 10px 100px;
+  
+}
+.Explore{
+  cursor: pointer;
+  height: 40px;
+  width: 90px;
+  margin: -60px 0px 10px 1100px;
+  padding: 11px 10px 9px 10px;
+  background-color: #001aff;
+  display: block;
+  transition: background-color 0.6s ease;
+  font-size: 15px;
+  color: black;
+}
+footer{
+  background-color: #3b3b3b;
+  height: auto;
+  margin: -22px 0 0 0;
+  text-align: center;
+}
+.down{
+  margin: auto;
+  margin-right: 36px;
+}
+/*===============================================*/
+.al5t{
+  text-align: center;
+  background-color: black;
+  color: #00c3ff;
+  margin-top: -42px;
+  font-size: 25px;
+ padding-bottom: 20px; 
+}
+.space{
+    margin:20px 145px 10px 130px;
+    color: #00c3ff;
+    padding-right: 5px;
+    font-family: Arial, Helvetica , sans-serif;
+    font-size: 25px;
+}
+.uspace{
+  background-color: black;
+  margin-top: -30px;
+  padding-bottom: 10px;
+  padding-top: 30px;
+  font-family: Arial, Helvetica , sans-serif;
+}
+.space1{
+
+  color: #00c3ff;
+    font-family: Arial, Helvetica , sans-serif;
+    margin-left: 73px;
+}
+.space2{
+
+  color: #00c3ff;
+    font-family: Arial, Helvetica , sans-serif;
+    margin-left: 185px;
+}
+.space3{
+
+  color: #00c3ff;
+    font-family: Arial, Helvetica , sans-serif;
+    margin-left: 228px;
+}
+.space4{
+
+  color: #00c3ff;
+    font-family: Arial, Helvetica , sans-serif;
+    margin-left: 210px;
+}
+.dotShape {
+  height: 35px;
+  width: 35px;
+  margin: -30px 2px 0px 2px;
+  background-color: #000000;
+  border-radius: 50%;
+  display: inline-block;
+  border: solid blue 1px;
+  padding: 33px 0px 0px 0px;
+}
+.left{
+  margin: 0%;
+}
+/*======================================*/
+.div{
+    background-color: #000000;
+    width: 50%;
+    height: 700px;
+    margin-top: -34px;
+  
+    
+  }
+  .h1{
+    color: rgb(0, 162, 255);
+    font-weight: normal;
+    font-size: 50px;
+    padding-left: 280px;
+    padding-top: 30px; 
+  }
+  .p{
+    padding-left: 350px;
+    font-size: xx-large;
+    color: #f2f2f2;
+    margin-top: -60px;
+  
+  }
+  .words{
+    font-size: 20px;
+    color: #f2f2f2;
+    padding-left: 30px;
+    margin: auto;
+    font-family: sans-serif;
+  }
+  
+  .email{
+    color: rgba(15, 70, 223, 0.8);
+    padding-left: 340px;
+    margin-top: 90px;
+    font-weight: normal;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+  }
+  .email2{
+    margin-left: -70px;
+    font-size: 20px;
+    font-family:cursive ;
+  }
+  .phone{
+    margin-left: 340px;
+    margin-top: 50px;
+  
+  }
+  .phone2{
+    color: rgba(15, 70, 223, 0.8);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+  
+  }
+  .phone3{
+    margin-left: -22px;
+    font-size: 20px;
+    font-family:cursive ;
+  
+  }
+  .address{
+    margin-top: 50px;
+    margin-left: 335px;
+  }
+  .address2{
+    color: rgba(15, 70, 223, 0.8);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+  
+  }
+  .h3{
+    color: white;
+    font-family:cursive ;
+    margin-left: 10px;
+  
+  }
+  
+  .div2{
+    background-color: #171616;
+    width: 50%;
+    height: 700px;
+    margin-left: 818px;
+    margin-top: -719px;
+  }
+  .p2{
+    color: rgb(0, 162, 255);
+    font-weight: normal;
+    font-size: 40px;
+    padding-left: 240px;
+    padding-top: 30px;
+  }
+  .pp{
+    padding-left: 360px;
+    font-size: xx-large;
+    color: #f2f2f2;
+    margin-top: -60px;
+  }
+  .li1{
+      margin-bottom: 30px;
+  }
+  .span{
+    padding-left: 85px;
+  }
+  .span1{
+    color: dodgerblue;
+    font-size: 22px;
+  }
+  .span2{
+    padding-left: 0px;
+  }
+  .span3{
+    color: dodgerblue;
+    font-size: 22px;
+    font-family: serif;
+    
+  }
+  
+  
+  .span4{
+    color: dodgerblue;
+    font-size: 22px;
+  }
+  .span5{
+    padding-left: 0px;
+    margin-left: -2px;
+  }
+  .span6{
+    color: dodgerblue;
+    font-size: 22px;
+    font-family: serif;
+    
+  }
+  .span7{
+    color: dodgerblue;
+    font-size: 22px;
+  }
+  .span8{
+    padding-left: 0px;
+    margin-left: -5px;
+  }
+  .span9{
+    color: dodgerblue;
+    font-size: 22px;
+    font-family: serif;
+    
+  }
+  .span10{
+    color: dodgerblue;
+    font-size: 22px;
+  }
+  .span11{
+    padding-left: 0px;
+    margin-left: -40px;
+  }
+  .span12{
+    color: dodgerblue;
+    font-size: 22px;
+    font-family: serif;
+    
+  }
+  .span13{
+    color: dodgerblue;
+    font-size: 22px;
+  }
+  .span14{
+    padding-left: 0px;
+    margin-left: -4px;
+  }
+  .span15{
+    color: dodgerblue;
+    font-size: 22px;
+    font-family: serif;
+    
+  }
+  .span16{
+    color: dodgerblue;
+    font-size: 22px;
+  }
+  .span17{
+    padding-left: 0px;
+    margin-left: 20px;
+  }
+  .span18{
+    color: dodgerblue;
+    font-size: 22px;
+    font-family: serif;
+    
+  }
+  .stor{
+    margin-top: 10px;
+    
+}
+.st{
+  background-color: #000000;
+}
+.butcolor{
+  background: rgb(33, 83, 228);
+  border-radius: 0.5cap;
+  border-style: none;
+  font-family: Arial, Helvetica , sans-serif;
+
+} 
+/*slide bar shape*/
+/* width */
+::-webkit-scrollbar {/*scrollbar width*/
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {/*المسار بتاعه يعني الجزء الي بيمشي فيه*/
+  border-radius: 5px;
+  background-color: #000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {/*الزرار الي بيتحرك فوق وتحت شفته ايوه بالظبط هو دا*/
+  background: rgb(255, 255, 255);
+}
